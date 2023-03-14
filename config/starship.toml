@@ -15,6 +15,7 @@ truncation_symbol = "…/"
 
 [character]
 success_symbol = "[ 󰧑 ](bold #ff7ce3)"
+error_symbol = "[ 󰚑 ](bold red)"
 
 [docker_context]
 symbol = " "
@@ -25,12 +26,12 @@ format = "on [[$symbol](yellow) [$project](red) [in](green) [$region](blue)]($st
 
 [git_branch]
 symbol = " "
+style = "bold #b4f9f8"
 ignore_branches = ["main", "master"]
 
 [git_status]
 format = '\[[$conflicted](bold red)[$stashed](bold #ff8d00)[$deleted](bold red)[$renamed](bold #ff7ce3)[$modified](bold cyan)[$staged](bold green)[$untracked](bold #ff7ce3)[$ahead_behind](bold yellow)\] '
 
-[go]
 [golang]
 symbol = "ﳑ "
 style = "cyan bold"
@@ -48,3 +49,8 @@ disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bg:#1d2230"
 format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
+
+[terragrunt]
+detect_extensions = ["hcl"]
+symbol = "󱁢 "
+style = "purple bold"
