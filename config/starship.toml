@@ -1,0 +1,50 @@
+command_timeout = 10000
+
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = "󰓃 "
+"Pictures" = " "
+"Projects" = "Projects  "
+
+[directory]
+style = "bold #ff8d00"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[character]
+success_symbol = "[ 󰧑 ](bold #ff7ce3)"
+
+[docker_context]
+symbol = " "
+
+[gcloud]
+symbol = "󱍢 "
+format = "on [[$symbol](yellow) [$project](red) [in](green) [$region](blue)]($style) "
+
+[git_branch]
+symbol = " "
+ignore_branches = ["main", "master"]
+
+[git_status]
+format = '\[[$conflicted](bold red)[$stashed](bold #ff8d00)[$deleted](bold red)[$renamed](bold #ff7ce3)[$modified](bold cyan)[$staged](bold green)[$untracked](bold #ff7ce3)[$ahead_behind](bold yellow)\] '
+
+[go]
+[golang]
+symbol = "ﳑ "
+style = "cyan bold"
+
+[python]
+symbol = " "
+style = "green bold"
+
+[terraform]
+symbol = "󱁢 "
+style = "purple bold"
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#1d2230"
+format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
