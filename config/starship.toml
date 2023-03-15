@@ -20,6 +20,10 @@ error_symbol = "[ 󰚑 ](bold red)"
 [docker_context]
 symbol = " "
 
+[aws]
+symbol = "󰸏 "
+format = 'on [$symbol($profile ) in $region ]($style)'
+
 [gcloud]
 symbol = "󱍢 "
 format = "on [[$symbol](yellow) [$project](red) [in](green) [$region](blue)]($style) "
