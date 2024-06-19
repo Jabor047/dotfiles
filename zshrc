@@ -1,5 +1,5 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
+# Q pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -124,8 +124,7 @@ if [ -f '/Users/kev_in/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/User
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/kev_in/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kev_in/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
-export PATH="$HOME/.poetry/bin:$PATH"
-export PATH="$HOME/.poetry/env:$PATH"
+
 export PATH="$HOME/bin/:$PATH"
 
 
@@ -135,7 +134,7 @@ complete -o nospace -C /Users/kev_in/bin/terraform terraform
 fpath+=~/.zfunc
 
 
-brew_conda = "/opt/homebrew/Caskroom/miniforge/base/bin/conda"
+brew_conda="/opt/homebrew/Caskroom/miniforge/base/bin/conda"
 
 if [ -d "$brew_conda" ]; then 
     # >>> conda initialize >>>
@@ -184,5 +183,11 @@ export PATH=$PATH:~/kubeflow/bin
 export PATH=$PATH:~/dotfiles/scripts
 alias free='python ~/dotfiles/scripts/free.py'
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+brew install zsh-autosuggestions
+
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+[[ -f "$HOME/fig-export/dotfiles/dotfile.zsh" ]] && builtin source "$HOME/fig-export/dotfiles/dotfile.zsh"
+
+# Q post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"

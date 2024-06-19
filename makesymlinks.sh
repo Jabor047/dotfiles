@@ -6,7 +6,7 @@
 
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files="bashrc vimrc vim zshrc oh-my-zsh config/starship.toml"    # list of files/folders to symlink in homedir
+files="bashrc vimrc vim zshrc config/starship.toml"    # list of files/folders to symlink in homedir
 
 echo -n "Creating $olddir for backup of any existing dotfiles -n ~..."
 mkdir -p $olddir
@@ -22,4 +22,6 @@ for file in $files; do
 	echo "Creating symlink to $file in home directory"
 	ln -s $dir/$file ~/.$file
 done
+
+ln -s $dir/ohmyzsh ~/.oh-my-zsh
 
